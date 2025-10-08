@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Konakage — Simple Landing</title>
+  <style>
+    :root{ --accent:#2563eb; --muted:#6b7280; --bg:#f8fafc; --card:#ffffff; }
+    body{ font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial; margin:0; background:var(--bg); color:#111827; }
+    .wrap{ max-width:900px; margin:40px auto; padding:24px; }
+    header{ display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .brand{ font-weight:700; color:var(--accent); font-size:1.15rem; }
+    nav a{ color:var(--muted); text-decoration:none; margin-left:12px; font-size:0.95rem; }
+    .hero{ background:linear-gradient(180deg, rgba(37,99,235,0.08), transparent); border:1px solid rgba(37,99,235,0.06); padding:28px; border-radius:12px; margin-top:18px; }
+    h1{ margin:0 0 8px 0; font-size:1.6rem; }
+    p.lead{ margin:0 0 16px 0; color:var(--muted); }
+    .btn{ display:inline-block; padding:10px 14px; border-radius:8px; background:var(--accent); color:white; text-decoration:none; font-weight:600; }
+    .grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin-top:18px; }
+    .card{ background:var(--card); padding:14px; border-radius:10px; box-shadow:0 1px 3px rgba(15,23,42,0.04); border:1px solid rgba(15,23,42,0.03); }
+    footer{ margin-top:26px; color:var(--muted); font-size:0.9rem; text-align:center; }
+    code{ background:#f3f4f6; padding:2px 6px; border-radius:6px; font-size:0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">Konakage</div>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#install">Install</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">Konakage — Simple automation for developers</h1>
+      <p class="lead">Lightweight tool to manage workflows, deployments and small automations. Designed for hosting and DevOps use-cases.</p>
+      <a class="btn" href="#install">Get Started</a>
+
+      <div class="grid" id="features" aria-label="features">
+        <div class="card">
+          <h3 style="margin-top:0">Easy Setup</h3>
+          <p style="margin:6px 0 0 0; color:var(--muted)">Clone, configure a few env vars and run — minimal dependencies.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Small footprint</h3>
+          <p style="margin:6px 0 0 0; color:var(--muted)">Optimized for low-resource servers (works on t2.micro / small VPS).</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">DevOps friendly</h3>
+          <p style="margin:6px 0 0 0; color:var(--muted)">Includes scripts for backups, deploys and health checks.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="install" style="margin-top:20px">
+      <div class="card">
+        <h2 style="margin:0 0 8px 0">Install (example)</h2>
+        <pre style="margin:0; background:#111827; color:#f8fafc; padding:12px; border-radius:8px; overflow:auto;">
+git clone https://github.com/yourusername/konakage.git
+cd konakage
+# for PHP/Laravel example
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan serve
+        </pre>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:18px">
+      <div class="card">
+        <h2 style="margin:0 0 8px 0">Contact</h2>
+        <p style="margin:0 0 8px 0; color:var(--muted)">Author: Abhijeet More — DevOps Engineer</p>
+        <p style="margin:0">LinkedIn: <a href="https://linkedin.com" target="_blank" rel="noopener">your-linkedin</a> • GitHub: <a href="https://github.com" target="_blank" rel="noopener">yourusername</a></p>
+      </div>
+    </section>
+
+    <footer>
+      <p>Made with ❤ • Save this file as <code>index.html</code> and edit content as needed.</p>
+    </footer>
+  </div>
+</body>
+</html>
